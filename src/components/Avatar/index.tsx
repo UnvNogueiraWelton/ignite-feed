@@ -1,19 +1,19 @@
+import { ComponentProps } from "react";
 import styles from "./styles.module.scss";
 
-interface AvatarProps {
-  src: string;
+interface AvatarProps extends ComponentProps<"img"> {
   hasBorder?: boolean;
 }
 
-export function Avatar({ src, hasBorder = false }: AvatarProps) {
+export function Avatar({ hasBorder = false, ...props }: AvatarProps) {
   return (
     <img
-      src={src}
       width={48}
       height={48}
       alt=""
-      data-hasBorder={hasBorder}
+      data-hasborder={hasBorder}
       className={styles.avatar}
+      {...props}
     />
   );
 }

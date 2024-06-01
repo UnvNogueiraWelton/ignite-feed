@@ -2,7 +2,7 @@
   box-sizing: initial;
   border-radius: 0.25rem;
 
-  &[data-hasBorder="true"] {
+  &[data-hasborder="true"] {
     border: 4px solid var(--gray-800);
     outline: 2px solid var(--green-500);
   }
